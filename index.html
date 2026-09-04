@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agentic Hub — AI Agents for Meetings, Contacts & Requirements</title>
+<meta name="description" content="Turn every meeting and business card into actionable intelligence with Agentic Hub's AI agents." />
+
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Shared theme styles -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-white text-slate-600 antialiased selection:bg-indigo-500 selection:text-white">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <a href="#" class="flex items-center gap-2 group">
+      <span class="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 shadow-lg shadow-indigo-500/20">
+        <i data-lucide="sparkles" class="h-4 w-4 text-white"></i>
+        <span class="absolute inset-0 rounded-lg bg-indigo-400 blur-md opacity-30 group-hover:opacity-60 transition-opacity"></span>
+      </span>
+      <span class="text-lg font-bold tracking-tight text-slate-900">Agentic Hub</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <a href="#features" class="hover:text-slate-900 transition-colors">Features</a>
+      <a href="#how-it-works" class="hover:text-slate-900 transition-colors">How It Works</a>
+      <a href="#pricing" class="hover:text-slate-900 transition-colors">Pricing</a>
+    </div>
+
+    <div class="hidden md:flex items-center gap-4">
+      <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Sign In</a>
+      <a href="#pricing" class="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.03] transition-all">
+        Try for Free
+        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+      </a>
+    </div>
+
+    <button id="menu-btn" class="md:hidden text-slate-600" aria-label="Open menu">
+      <i data-lucide="menu" class="h-6 w-6"></i>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-4">
+    <a href="#features" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Features</a>
+    <a href="#how-it-works" class="block text-sm font-medium text-slate-600 hover:text-slate-900">How It Works</a>
+    <a href="#pricing" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Pricing</a>
+    <a href="#pricing" class="block w-full text-center rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white">Try for Free</a>
+  </div>
+</header>
+
+<main class="relative overflow-hidden">
+
+  <!-- ================= HERO ================= -->
+  <section class="relative bg-grid hero-glow pt-40 pb-24 px-6">
+    <div class="absolute top-24 left-1/2 -translate-x-1/2 h-[500px] w-[900px] bg-indigo-200/30 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-5xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 backdrop-blur-md px-4 py-1.5 text-xs font-medium text-slate-600 shadow-sm">
+        <i data-lucide="sparkles" class="h-3.5 w-3.5 text-indigo-500"></i>
+        Next-Gen AI Agents for B2B &amp; Professionals
+      </div>
+
+      <h1 class="mt-8 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
+        Turn Every Meeting &amp; Business Card Into
+        <span class="text-gradient">Actionable Intelligence</span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-500">
+        Automatically transcribe client meetings, convert paper business cards into structured databases, and brainstorm requirements directly with your private AI assistant.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#pricing" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] transition-all">
+          <i data-lucide="rocket" class="h-4 w-4"></i>
+          Start Free Trial (No Credit Card)
+        </a>
+        <a href="#how-it-works" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all">
+          <i data-lucide="play-circle" class="h-4 w-4"></i>
+          Watch Demo
+        </a>
+      </div>
+
+      <!-- ============ RICH UI PREVIEW: DUAL PANEL DASHBOARD ============ -->
+      <div class="mt-20 relative">
+        <div class="absolute -inset-x-10 -inset-y-6 bg-gradient-to-r from-indigo-200/20 via-violet-200/20 to-transparent blur-3xl -z-10"></div>
+
+        <div class="rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-300/40 overflow-hidden text-left">
+          <!-- Fake window chrome -->
+          <div class="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-4 py-3">
+            <span class="h-3 w-3 rounded-full bg-red-400"></span>
+            <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+            <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+            <span class="ml-4 text-xs text-slate-400 font-medium">agentichub.ai/session/9f21</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+            <!-- LEFT PANEL: raw transcript -->
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-4">
+                <i data-lucide="mic" class="h-4 w-4 text-slate-400"></i>
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Live Transcript</span>
+                <span class="ml-auto flex items-center gap-1.5 text-[11px] text-emerald-600">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  Recording
+                </span>
+              </div>
+              <div class="space-y-3 text-sm">
+                <p class="text-slate-500"><span class="text-slate-800 font-medium">00:02:14 — Sarah (Client):</span> We really need the platform to support SOC 2 compliance before we sign off. Also, can it integrate with our existing Salesforce instance?</p>
+                <p class="text-slate-500"><span class="text-slate-800 font-medium">00:03:02 — You:</span> Yes, we support SOC 2 Type II and native Salesforce sync. I'll send over a security whitepaper.</p>
+                <p class="text-slate-500"><span class="text-slate-800 font-medium">00:04:41 — Sarah (Client):</span> Great. Let's plan for a pilot rollout by end of next month with 20 seats.</p>
+                <p class="text-slate-400 italic">…transcribing in real time</p>
+              </div>
+            </div>
+
+            <!-- RIGHT PANEL: AI structured output -->
+            <div class="p-6 bg-slate-50">
+              <div class="flex items-center gap-2 mb-4">
+                <i data-lucide="brain-circuit" class="h-4 w-4 text-indigo-500"></i>
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">AI-Generated Summary</span>
+              </div>
+
+              <div class="rounded-xl border border-slate-200 bg-white p-4 mb-4">
+                <p class="text-xs font-semibold text-slate-700 mb-2">Key Discussion Points</p>
+                <ul class="space-y-1.5 text-xs text-slate-500">
+                  <li class="flex gap-2"><i data-lucide="check-circle-2" class="h-3.5 w-3.5 text-emerald-500 shrink-0 mt-0.5"></i> SOC 2 Type II compliance required</li>
+                  <li class="flex gap-2"><i data-lucide="check-circle-2" class="h-3.5 w-3.5 text-emerald-500 shrink-0 mt-0.5"></i> Native Salesforce integration requested</li>
+                  <li class="flex gap-2"><i data-lucide="check-circle-2" class="h-3.5 w-3.5 text-emerald-500 shrink-0 mt-0.5"></i> Pilot rollout: 20 seats, next month</li>
+                </ul>
+              </div>
+
+              <div class="rounded-xl border border-slate-200 bg-white p-4 mb-4">
+                <p class="text-xs font-semibold text-slate-700 mb-2">Action Items</p>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-xs text-slate-500">
+                    <input type="checkbox" checked class="rounded border-slate-300 text-indigo-500 focus:ring-0" disabled>
+                    Send SOC 2 whitepaper to Sarah
+                  </label>
+                  <label class="flex items-center gap-2 text-xs text-slate-500">
+                    <input type="checkbox" class="rounded border-slate-300 text-indigo-500 focus:ring-0" disabled>
+                    Schedule Salesforce integration demo
+                  </label>
+                  <label class="flex items-center gap-2 text-xs text-slate-500">
+                    <input type="checkbox" class="rounded border-slate-300 text-indigo-500 focus:ring-0" disabled>
+                    Draft pilot rollout plan (20 seats)
+                  </label>
+                </div>
+              </div>
+
+              <!-- Auto-saved business card -->
+              <div class="rounded-xl border border-indigo-200 bg-gradient-to-br from-indigo-50 to-violet-50 p-4 flex items-center gap-3">
+                <div class="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-400 to-violet-500 flex items-center justify-center text-white text-sm font-bold shrink-0">SC</div>
+                <div class="min-w-0">
+                  <p class="text-xs font-semibold text-slate-900 truncate">Sarah Collins</p>
+                  <p class="text-[11px] text-slate-500 truncate">VP Operations · Northwind Logistics</p>
+                </div>
+                <span class="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-1 text-[10px] font-medium text-emerald-700 shrink-0">
+                  <i data-lucide="badge-check" class="h-3 w-3"></i> Auto-saved
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOCIAL PROOF ================= -->
+  <section class="px-6 py-14 border-y border-slate-200 bg-slate-50/60">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-sm font-medium text-slate-500 mb-8">Trusted by 500+ founders, sales leaders, and agencies</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-60">
+        <span class="text-xl font-bold tracking-tight text-slate-500 flex items-center gap-2"><i data-lucide="hexagon"></i>Nexoria</span>
+        <span class="text-xl font-bold tracking-tight text-slate-500 flex items-center gap-2"><i data-lucide="triangle"></i>Vertex</span>
+        <span class="text-xl font-bold tracking-tight text-slate-500 flex items-center gap-2"><i data-lucide="orbit"></i>Orbitly</span>
+        <span class="text-xl font-bold tracking-tight text-slate-500 flex items-center gap-2"><i data-lucide="atom"></i>Atomic&nbsp;Co</span>
+        <span class="text-xl font-bold tracking-tight text-slate-500 flex items-center gap-2"><i data-lucide="gem"></i>Lucent</span>
+        <span class="text-xl font-bold tracking-tight text-slate-500 flex items-center gap-2"><i data-lucide="shield"></i>Fortify</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section id="features" class="px-6 py-28">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-indigo-600">
+          <i data-lucide="layout-grid" class="h-3.5 w-3.5"></i> Core Features
+        </span>
+        <h2 class="mt-5 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Everything your admin work needed, automated</h2>
+        <p class="mt-4 text-slate-500">Three AI agents that quietly do the busywork so your team can focus on closing deals.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- Feature 1 -->
+        <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100 transition-all">
+          <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25 mb-5">
+            <i data-lucide="file-audio" class="h-5 w-5 text-white"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">AI Meeting Notes &amp; Action Items</h3>
+          <p class="text-sm text-slate-500 mb-6">Every call auto-transcribed and distilled into decisions, owners, and deadlines — no more scrambling for notes.</p>
+
+          <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 space-y-3">
+            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+              <i data-lucide="align-left" class="h-3 w-3"></i> Transcript snippet
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed">"...we'd want reporting exportable to CSV and a webhook for status changes..."</p>
+            <div class="flex items-center justify-center text-slate-300">
+              <i data-lucide="arrow-down" class="h-3.5 w-3.5"></i>
+            </div>
+            <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-2 flex items-center gap-2">
+              <i data-lucide="list-checks" class="h-3.5 w-3.5 text-emerald-500 shrink-0"></i>
+              <span class="text-xs text-emerald-700">Action: Build CSV export + webhook</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100 transition-all">
+          <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25 mb-5">
+            <i data-lucide="scan-line" class="h-5 w-5 text-white"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">Instant Business Card Scanner</h3>
+          <p class="text-sm text-slate-500 mb-6">Snap a photo of any card. OCR extracts every field and pushes a clean, de-duplicated row straight into your CRM.</p>
+
+          <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <div class="flex items-center gap-2 text-[11px] text-slate-400 mb-3">
+              <i data-lucide="camera" class="h-3 w-3"></i> Scanning card...
+            </div>
+            <div class="relative h-20 rounded-lg border border-dashed border-indigo-300 bg-white flex items-center justify-center overflow-hidden mb-3">
+              <i data-lucide="contact" class="h-8 w-8 text-slate-300"></i>
+              <div class="absolute inset-x-0 h-0.5 bg-indigo-400 shadow-[0_0_12px_2px_rgba(129,140,248,0.6)] animate-[float_2s_ease-in-out_infinite]"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-[11px]">
+              <div class="rounded bg-white border border-slate-200 px-2 py-1.5 text-slate-400">Name: <span class="text-slate-700">D. Ruiz</span></div>
+              <div class="rounded bg-white border border-slate-200 px-2 py-1.5 text-slate-400">Co: <span class="text-slate-700">Vantage</span></div>
+              <div class="rounded bg-white border border-slate-200 px-2 py-1.5 text-slate-400">Email: <span class="text-slate-700">d@vtg.io</span></div>
+              <div class="rounded bg-white border border-slate-200 px-2 py-1.5 text-slate-400">Phone: <span class="text-slate-700">•••4821</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-100 transition-all">
+          <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25 mb-5">
+            <i data-lucide="message-circle-question" class="h-5 w-5 text-white"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">Conversational Requirement Brainstorming</h3>
+          <p class="text-sm text-slate-500 mb-6">Ask your private AI assistant anything about past conversations — it cites the exact transcript timestamp.</p>
+
+          <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 space-y-3">
+            <div class="flex items-start gap-2 justify-end">
+              <div class="rounded-lg rounded-tr-sm bg-indigo-50 border border-indigo-200 px-3 py-2 text-xs text-indigo-900 max-w-[85%]">
+                What were the security requirements discussed in yesterday's call?
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <div class="h-6 w-6 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shrink-0">
+                <i data-lucide="bot" class="h-3.5 w-3.5 text-white"></i>
+              </div>
+              <div class="rounded-lg rounded-tl-sm bg-white border border-slate-200 px-3 py-2 text-xs text-slate-600 max-w-[85%]">
+                Client requires SOC 2 Type II compliance and SSO via Okta.
+                <span class="block mt-1.5 text-[10px] font-medium text-indigo-500">↳ cited from 00:02:14</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS / BEFORE-AFTER ================= -->
+  <section id="how-it-works" class="px-6 py-28 border-t border-slate-200 bg-slate-50/60">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-indigo-600">
+          <i data-lucide="git-compare" class="h-3.5 w-3.5"></i> How It Works
+        </span>
+        <h2 class="mt-5 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">The old way vs. the Agentic Hub way</h2>
+        <p class="mt-4 text-slate-500">See exactly what disappears from your workflow — and what replaces it.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Traditional -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <div class="flex items-center gap-2 mb-6">
+            <i data-lucide="x-circle" class="h-5 w-5 text-red-500"></i>
+            <h3 class="text-lg font-semibold text-slate-800">Traditional Way</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3 text-sm text-slate-500">
+              <i data-lucide="minus-circle" class="h-4 w-4 text-red-400 shrink-0 mt-0.5"></i>
+              Scattered manual notes across notebooks, Slack, and sticky notes
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-500">
+              <i data-lucide="minus-circle" class="h-4 w-4 text-red-400 shrink-0 mt-0.5"></i>
+              Business cards lost in a drawer or forgotten in a jacket pocket
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-500">
+              <i data-lucide="minus-circle" class="h-4 w-4 text-red-400 shrink-0 mt-0.5"></i>
+              Forgotten project details that resurface as costly surprises
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-500">
+              <i data-lucide="minus-circle" class="h-4 w-4 text-red-400 shrink-0 mt-0.5"></i>
+              Hours spent manually re-typing contacts into a CRM
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-500">
+              <i data-lucide="minus-circle" class="h-4 w-4 text-red-400 shrink-0 mt-0.5"></i>
+              No searchable record of what was actually promised to a client
+            </li>
+          </ul>
+        </div>
+
+        <!-- With AI -->
+        <div class="relative rounded-2xl border border-indigo-300 bg-gradient-to-b from-indigo-50 to-white p-8 shadow-xl shadow-indigo-100">
+          <div class="flex items-center gap-2 mb-6">
+            <i data-lucide="check-circle" class="h-5 w-5 text-emerald-500"></i>
+            <h3 class="text-lg font-semibold text-slate-900">With Agentic Hub</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3 text-sm text-slate-700">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              Centralized, searchable database of every meeting &amp; decision
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-700">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              Instant execution — action items sync to your task manager
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-700">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              Automated client project briefs generated after every call
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-700">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              Business cards auto-scanned into a structured contact record
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-700">
+              <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0 mt-0.5"></i>
+              Ask your AI assistant anything, anytime, with cited sources
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING ================= -->
+  <section id="pricing" class="px-6 py-28">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-indigo-600">
+          <i data-lucide="credit-card" class="h-3.5 w-3.5"></i> Pricing
+        </span>
+        <h2 class="mt-5 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Simple, transparent pricing</h2>
+        <p class="mt-4 text-slate-500">Start free as a solo consultant. Scale up when your team needs more firepower.</p>
+
+        <!-- Toggle -->
+        <div class="mt-8 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-slate-100 p-1">
+          <button id="toggle-monthly" class="px-4 py-2 rounded-full text-sm font-semibold bg-white text-slate-900 shadow-sm transition-all">Monthly</button>
+          <button id="toggle-yearly" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-500 transition-all">Yearly <span class="text-emerald-600">−20%</span></button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+        <!-- Individual Tier -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 flex flex-col shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">Individual</h3>
+          <p class="mt-1 text-sm text-slate-500">For solo freelancers &amp; consultants</p>
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="text-4xl font-extrabold text-slate-900">$0</span>
+            <span class="text-sm text-slate-400">/ forever</span>
+          </div>
+          <a href="#" class="mt-6 inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all">
+            Get Started Free
+          </a>
+          <ul class="mt-8 space-y-3 text-sm text-slate-500">
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> 15 meeting transcripts / month</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Basic CRM &amp; contact storage</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Single user seat</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Business card scanner (10/mo)</li>
+            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="x" class="h-4 w-4"></i> Team sharing</li>
+            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="x" class="h-4 w-4"></i> Priority processing</li>
+          </ul>
+        </div>
+
+        <!-- B2B Team Tier -->
+        <div class="relative rounded-2xl border border-indigo-400 bg-gradient-to-b from-indigo-50 to-white p-8 flex flex-col shadow-2xl shadow-indigo-100">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-1 text-xs font-bold text-white shadow-lg shadow-indigo-500/30 animate-glow">
+            <i data-lucide="flame" class="h-3.5 w-3.5"></i> Most Popular
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900">B2B Team</h3>
+          <p class="mt-1 text-sm text-slate-500">For growing sales &amp; agency teams</p>
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="price-monthly text-4xl font-extrabold text-slate-900">$49</span>
+            <span class="price-yearly hidden text-4xl font-extrabold text-slate-900">$39</span>
+            <span class="text-sm text-slate-400">/ user / month</span>
+          </div>
+          <a href="#" class="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-[1.02] transition-all">
+            <i data-lucide="rocket" class="h-4 w-4"></i> Start Free Trial
+          </a>
+          <ul class="mt-8 space-y-3 text-sm text-slate-700">
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Unlimited AI agent queries</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Unlimited meeting transcripts</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Team sharing &amp; permissions</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Full CRM export (CSV, HubSpot, Salesforce)</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Priority processing &amp; support</li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="h-4 w-4 text-emerald-500"></i> Unlimited business card scans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="px-6 pb-28">
+    <div class="max-w-5xl mx-auto">
+      <div class="relative overflow-hidden rounded-3xl border border-indigo-400/30 bg-gradient-to-br from-indigo-600 via-indigo-500 to-violet-600 px-8 py-16 sm:px-16 text-center shadow-2xl shadow-indigo-300/40">
+        <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-violet-900/20 blur-3xl"></div>
+
+        <div class="relative">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Ready to automate your administrative workflow?</h2>
+          <p class="mt-4 text-indigo-100 max-w-xl mx-auto">Join 500+ founders and sales leaders already saving hours every week with Agentic Hub.</p>
+
+          <form class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto" onsubmit="return false;">
+            <input type="email" required placeholder="you@company.com" class="w-full sm:flex-1 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md px-4 py-3 text-sm text-white placeholder-indigo-100 focus:outline-none focus:ring-2 focus:ring-white/60" />
+            <button type="submit" class="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-indigo-700 hover:bg-indigo-50 transition-all">
+              Get Started
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </form>
+          <p class="mt-4 text-xs text-indigo-100">No credit card required · Free 14-day trial · Cancel anytime</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-slate-200 px-6 py-14 bg-slate-50/60">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8">
+    <div class="col-span-2 sm:col-span-1">
+      <a href="#" class="flex items-center gap-2 mb-4">
+        <span class="relative flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500">
+          <i data-lucide="sparkles" class="h-3.5 w-3.5 text-white"></i>
+        </span>
+        <span class="text-base font-bold text-slate-900">Agentic Hub</span>
+      </a>
+      <p class="text-sm text-slate-500">AI agents that turn conversations into action.</p>
+    </div>
+
+    <div>
+      <h4 class="text-sm font-semibold text-slate-900 mb-4">Product</h4>
+      <ul class="space-y-2.5 text-sm text-slate-500">
+        <li><a href="#features" class="hover:text-slate-900 transition-colors">Features</a></li>
+        <li><a href="#how-it-works" class="hover:text-slate-900 transition-colors">How It Works</a></li>
+        <li><a href="#pricing" class="hover:text-slate-900 transition-colors">Pricing</a></li>
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Changelog</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-sm font-semibold text-slate-900 mb-4">Company</h4>
+      <ul class="space-y-2.5 text-sm text-slate-500">
+        <li><a href="#" class="hover:text-slate-900 transition-colors">About</a></li>
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Careers</a></li>
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-sm font-semibold text-slate-900 mb-4">Legal</h4>
+      <ul class="space-y-2.5 text-sm text-slate-500">
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-slate-900 transition-colors">Security</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-xs text-slate-400">© 2026 Agentic Hub, Inc. All rights reserved.</p>
+    <div class="flex items-center gap-4">
+      <a href="#" aria-label="Twitter / X" class="text-slate-400 hover:text-slate-900 transition-colors"><i data-lucide="twitter" class="h-4 w-4"></i></a>
+      <a href="#" aria-label="LinkedIn" class="text-slate-400 hover:text-slate-900 transition-colors"><i data-lucide="linkedin" class="h-4 w-4"></i></a>
+      <a href="#" aria-label="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors"><i data-lucide="github" class="h-4 w-4"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Shared page behaviour -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

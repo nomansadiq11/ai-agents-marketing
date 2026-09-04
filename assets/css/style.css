@@ -1,0 +1,37 @@
+/* Shared theme styles for Agentic Hub marketing pages (light theme) */
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.hero-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.12), transparent 60%);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #6366f1, #a855f7, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::selection {
+  background: #6366f1;
+  color: white;
+}
