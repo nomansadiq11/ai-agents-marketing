@@ -37,6 +37,7 @@
 
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
       <a href="#features" class="hover:text-slate-900 transition-colors">Features</a>
+      <a href="#agents" class="hover:text-slate-900 transition-colors">Agents</a>
       <a href="#how-it-works" class="hover:text-slate-900 transition-colors">How It Works</a>
       <a href="#pricing" class="hover:text-slate-900 transition-colors">Pricing</a>
     </div>
@@ -57,6 +58,7 @@
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-4">
     <a href="#features" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Features</a>
+    <a href="#agents" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Agents</a>
     <a href="#how-it-works" class="block text-sm font-medium text-slate-600 hover:text-slate-900">How It Works</a>
     <a href="#pricing" class="block text-sm font-medium text-slate-600 hover:text-slate-900">Pricing</a>
     <a href="#pricing" class="block w-full text-center rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white">Try for Free</a>
@@ -287,6 +289,149 @@
     </div>
   </section>
 
+  <!-- ================= AGENTS SLIDER ================= -->
+  <section id="agents" class="px-6 py-28 border-t border-slate-200 bg-slate-50/60 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-14">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-indigo-600">
+          <i data-lucide="bot" class="h-3.5 w-3.5"></i> Growing Agent Roster
+        </span>
+        <h2 class="mt-5 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">More agents joining the hub</h2>
+        <p class="mt-4 text-slate-500">A single workspace for every AI agent your team needs — new ones ship every month.</p>
+      </div>
+
+      <div class="relative">
+        <!-- Slider track -->
+        <div id="agents-track" class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide pb-2 -mx-6 px-6">
+
+          <!-- Agent 1 -->
+          <div class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <i data-lucide="file-audio" class="h-5 w-5 text-white"></i>
+              </div>
+              <span class="inline-flex items-center gap-1 rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-1 text-[10px] font-semibold text-emerald-700">
+                <i data-lucide="circle-dot" class="h-3 w-3"></i> Live
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Meeting Notes Agent</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Transcribes and summarizes every call into decisions and owners automatically.</p>
+          </div>
+
+          <!-- Agent 2 -->
+          <div class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <i data-lucide="scan-line" class="h-5 w-5 text-white"></i>
+              </div>
+              <span class="inline-flex items-center gap-1 rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-1 text-[10px] font-semibold text-emerald-700">
+                <i data-lucide="circle-dot" class="h-3 w-3"></i> Live
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Business Card Scanner</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">OCR extracts contact details and pushes a clean row straight into your CRM.</p>
+          </div>
+
+          <!-- Agent 3 -->
+          <div class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <i data-lucide="message-circle-question" class="h-5 w-5 text-white"></i>
+              </div>
+              <span class="inline-flex items-center gap-1 rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-1 text-[10px] font-semibold text-emerald-700">
+                <i data-lucide="circle-dot" class="h-3 w-3"></i> Live
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Requirement Brainstorming</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Chat with your entire meeting history and get answers cited with timestamps.</p>
+          </div>
+
+          <!-- Agent 4 -->
+          <div class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <i data-lucide="mail" class="h-5 w-5 text-white"></i>
+              </div>
+              <span class="inline-flex items-center gap-1 rounded-full bg-slate-100 border border-slate-200 px-2.5 py-1 text-[10px] font-semibold text-slate-500">
+                <i data-lucide="clock" class="h-3 w-3"></i> Coming Soon
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Follow-Up Email Agent</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Drafts a personalized follow-up email minutes after every client call ends.</p>
+          </div>
+
+          <!-- Agent 5 -->
+          <div class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <i data-lucide="file-text" class="h-5 w-5 text-white"></i>
+              </div>
+              <span class="inline-flex items-center gap-1 rounded-full bg-slate-100 border border-slate-200 px-2.5 py-1 text-[10px] font-semibold text-slate-500">
+                <i data-lucide="clock" class="h-3 w-3"></i> Coming Soon
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Proposal Generator</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Turns a discovery call transcript into a ready-to-send client proposal.</p>
+          </div>
+
+          <!-- Agent 6 -->
+          <div class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <i data-lucide="refresh-cw" class="h-5 w-5 text-white"></i>
+              </div>
+              <span class="inline-flex items-center gap-1 rounded-full bg-slate-100 border border-slate-200 px-2.5 py-1 text-[10px] font-semibold text-slate-500">
+                <i data-lucide="clock" class="h-3 w-3"></i> Coming Soon
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1.5">CRM Sync Agent</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Keeps HubSpot and Salesforce records perfectly in sync, both directions.</p>
+          </div>
+
+          <!-- Agent 7 -->
+          <div class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <i data-lucide="calendar-clock" class="h-5 w-5 text-white"></i>
+              </div>
+              <span class="inline-flex items-center gap-1 rounded-full bg-slate-100 border border-slate-200 px-2.5 py-1 text-[10px] font-semibold text-slate-500">
+                <i data-lucide="clock" class="h-3 w-3"></i> Coming Soon
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Meeting Scheduler Agent</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Finds the next best meeting slot across time zones and sends the invite.</p>
+          </div>
+
+          <!-- Agent 8 -->
+          <div class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <div class="h-11 w-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <i data-lucide="search" class="h-5 w-5 text-white"></i>
+              </div>
+              <span class="inline-flex items-center gap-1 rounded-full bg-slate-100 border border-slate-200 px-2.5 py-1 text-[10px] font-semibold text-slate-500">
+                <i data-lucide="clock" class="h-3 w-3"></i> Coming Soon
+              </span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1.5">Competitor Research Agent</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Surfaces competitor mentions from your calls into a live battlecard.</p>
+          </div>
+
+        </div>
+
+        <!-- Slider controls -->
+        <button id="agents-prev" aria-label="Previous agent" class="hidden sm:flex absolute -left-5 top-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-md hover:bg-slate-50 transition-colors">
+          <i data-lucide="chevron-left" class="h-4 w-4 text-slate-600"></i>
+        </button>
+        <button id="agents-next" aria-label="Next agent" class="hidden sm:flex absolute -right-5 top-1/2 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white shadow-md hover:bg-slate-50 transition-colors">
+          <i data-lucide="chevron-right" class="h-4 w-4 text-slate-600"></i>
+        </button>
+      </div>
+
+      <!-- Dot indicators -->
+      <div id="agents-dots" class="mt-8 flex items-center justify-center gap-2"></div>
+    </div>
+  </section>
+
   <!-- ================= HOW IT WORKS / BEFORE-AFTER ================= -->
   <section id="how-it-works" class="px-6 py-28 border-t border-slate-200 bg-slate-50/60">
     <div class="max-w-6xl mx-auto">
@@ -472,6 +617,7 @@
       <h4 class="text-sm font-semibold text-slate-900 mb-4">Product</h4>
       <ul class="space-y-2.5 text-sm text-slate-500">
         <li><a href="#features" class="hover:text-slate-900 transition-colors">Features</a></li>
+        <li><a href="#agents" class="hover:text-slate-900 transition-colors">Agents</a></li>
         <li><a href="#how-it-works" class="hover:text-slate-900 transition-colors">How It Works</a></li>
         <li><a href="#pricing" class="hover:text-slate-900 transition-colors">Pricing</a></li>
         <li><a href="#" class="hover:text-slate-900 transition-colors">Changelog</a></li>

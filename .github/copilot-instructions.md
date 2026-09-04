@@ -34,5 +34,9 @@ When adding a new page, copy this `<head>`/script pattern from [index.html](../i
 ## Conventions
 
 - Keep everything in one HTML file per page; don't introduce a templating engine or split header/footer into separate includes (there is no server-side include mechanism here).
-- Section IDs (`#features`, `#how-it-works`, `#pricing`) are used by nav anchor links — keep these IDs stable if you reorder sections.
+- Section IDs (`#features`, `#agents`, `#how-it-works`, `#pricing`) are used by nav anchor links — keep these IDs stable if you reorder sections.
 - Comments in markup use `<!-- ================= SECTION ================= -->` banners to delineate major page sections — follow this style for new sections.
+
+## Slider / Carousel Pattern
+
+The `#agents` section (`assets/js/main.js`) is the reference implementation for any future horizontal slider: a `flex overflow-x-auto snap-x snap-mandatory scrollbar-hide` track of `snap-start shrink-0` cards, optional prev/next buttons (`#agents-prev`/`#agents-next`), and JS-generated dot indicators (`#agents-dots`) synced to scroll position. Reuse these same element IDs/classes (or param­eterize them) rather than adding a slider library — `main.js` already guards this block with `if (track && dotsWrap)` so it's safe to include on pages without a slider.
