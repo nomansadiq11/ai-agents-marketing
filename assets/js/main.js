@@ -39,12 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Hero headline slogan rotator (only runs on pages that have it)
   const heroHeadline = document.getElementById('hero-headline');
+  const heroSubheadline = document.getElementById('hero-subheadline');
   const heroDotsWrap = document.getElementById('hero-headline-dots');
   if (heroHeadline && heroDotsWrap) {
     const slogans = [
       'Tired of Repetitive <span class="text-gradient">Administrative Work</span>?',
       'Turn Every Meeting &amp; Business Card Into <span class="text-gradient">Actionable Intelligence</span>',
       'Build Your Own AI Agents, <span class="text-gradient">Tailored to Your Requirements</span>',
+    ];
+    const subheadlines = [
+      'Stop losing hours to manual note-taking, data entry, and repetitive admin work — let AI agents handle it while you focus on the actual job.',
+      'Automatically transcribe client meetings, convert paper business cards into structured databases, and brainstorm requirements directly with your private AI assistant.',
+      'Describe the workflow you want automated and our team ships a custom AI agent for your business — deployable on your own cloud if you need it.',
     ];
     let activeSlogan = 1; // matches the slogan already in the markup
     let rotateTimer;
@@ -69,9 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showSlogan = (index, manual) => {
       heroHeadline.classList.add('opacity-0');
+      if (heroSubheadline) heroSubheadline.classList.add('opacity-0');
       setTimeout(() => {
         heroHeadline.innerHTML = slogans[index];
         heroHeadline.classList.remove('opacity-0');
+        if (heroSubheadline) {
+          heroSubheadline.innerHTML = subheadlines[index];
+          heroSubheadline.classList.remove('opacity-0');
+        }
         activeSlogan = index;
         setActiveHeroDot(index);
       }, 500);
