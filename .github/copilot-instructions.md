@@ -34,7 +34,7 @@ When adding a new page, copy this `<head>`/script pattern from [index.html](../i
 ## Conventions
 
 - Keep everything in one HTML file per page; don't introduce a templating engine or split header/footer into separate includes (there is no server-side include mechanism here).
-- Section IDs (`#features`, `#agents`, `#how-it-works`, `#pricing`) are used by nav anchor links — keep these IDs stable if you reorder sections.
+- Section IDs (`#features`, `#agents`, `#enterprise`, `#how-it-works`, `#pricing`) are used by nav anchor links — keep these IDs stable if you reorder sections.
 - Comments in markup use `<!-- ================= SECTION ================= -->` banners to delineate major page sections — follow this style for new sections.
 
 ## Slider / Carousel Pattern
