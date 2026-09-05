@@ -435,6 +435,113 @@
     </div>
   </section>
 
+  <!-- ================= MOBILE APP ================= -->
+  <section id="mobile-app" class="px-6 py-28 border-t border-slate-200 bg-slate-50/60">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Copy + feature list -->
+      <div>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-indigo-600">
+          <i data-lucide="smartphone" class="h-3.5 w-3.5"></i> On the Go
+        </span>
+        <h2 class="mt-5 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Your agents, right in your pocket</h2>
+        <p class="mt-4 text-slate-500">Scan business cards, brainstorm requirements, and talk to your agents from anywhere with the Agentic Hub mobile app.</p>
+
+        <ul class="mt-8 space-y-5">
+          <li class="flex items-start gap-4">
+            <div class="h-9 w-9 shrink-0 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+              <i data-lucide="mic" class="h-4 w-4 text-white"></i>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-900">Talk to your agent</p>
+              <p class="text-sm text-slate-500">Speak naturally to log notes, ask questions, or brainstorm requirements while you're on the move.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="h-9 w-9 shrink-0 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+              <i data-lucide="scan-line" class="h-4 w-4 text-white"></i>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-900">Scan business cards anywhere</p>
+              <p class="text-sm text-slate-500">Point your camera at any card and it's instantly saved as a structured contact.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="h-9 w-9 shrink-0 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+              <i data-lucide="bot" class="h-4 w-4 text-white"></i>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-900">One general agent for everything</p>
+              <p class="text-sm text-slate-500">Ask about any meeting, contact, or project — your general agent searches your entire workspace.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-9 flex flex-col sm:flex-row gap-3">
+          <a href="#" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-all">
+            <i data-lucide="apple" class="h-4 w-4"></i> Download on the App Store
+          </a>
+          <a href="#" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-all">
+            <i data-lucide="play" class="h-4 w-4"></i> Get it on Google Play
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="relative flex justify-center">
+        <div class="absolute inset-x-10 inset-y-6 bg-gradient-to-br from-indigo-200/30 via-violet-200/30 to-transparent blur-3xl -z-10"></div>
+
+        <div class="w-[280px] rounded-[2.5rem] border-[10px] border-slate-900 bg-slate-900 shadow-2xl shadow-slate-400/40">
+          <div class="relative bg-white rounded-[1.75rem] overflow-hidden aspect-[9/19]">
+            <!-- notch -->
+            <div class="absolute top-0 inset-x-0 flex justify-center z-10">
+              <div class="h-5 w-28 rounded-b-2xl bg-slate-900"></div>
+            </div>
+
+            <!-- app header -->
+            <div class="pt-9 px-4 pb-3 border-b border-slate-100 flex items-center gap-2">
+              <div class="h-7 w-7 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shrink-0">
+                <i data-lucide="bot" class="h-3.5 w-3.5 text-white"></i>
+              </div>
+              <div class="min-w-0">
+                <p class="text-xs font-semibold text-slate-900">General Agent</p>
+                <p class="text-[10px] text-emerald-600 flex items-center gap-1">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Online
+                </p>
+              </div>
+            </div>
+
+            <!-- chat thread -->
+            <div class="px-4 py-3 space-y-2.5 text-[11px] leading-relaxed">
+              <div class="flex justify-end">
+                <div class="rounded-lg rounded-tr-sm bg-indigo-50 border border-indigo-100 px-3 py-2 max-w-[80%] text-indigo-900">What's next with Northwind Logistics?</div>
+              </div>
+              <div class="flex justify-start">
+                <div class="rounded-lg rounded-tl-sm bg-slate-100 px-3 py-2 max-w-[80%] text-slate-600">Pilot rollout starts Monday, 20 seats. Want me to draft the kickoff email?</div>
+              </div>
+              <div class="flex justify-end">
+                <div class="rounded-lg rounded-tr-sm bg-indigo-50 border border-indigo-100 px-3 py-2 max-w-[80%] text-indigo-900">Yes please 🙌</div>
+              </div>
+            </div>
+
+            <!-- floating scan button -->
+            <div class="absolute bottom-16 right-4 h-11 w-11 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 shadow-lg shadow-indigo-500/40 flex items-center justify-center">
+              <i data-lucide="scan-line" class="h-5 w-5 text-white"></i>
+            </div>
+
+            <!-- bottom nav -->
+            <div class="absolute bottom-0 inset-x-0 border-t border-slate-100 bg-white px-6 py-3 flex items-center justify-between">
+              <i data-lucide="message-circle" class="h-4 w-4 text-indigo-500"></i>
+              <i data-lucide="contact" class="h-4 w-4 text-slate-300"></i>
+              <i data-lucide="bot" class="h-4 w-4 text-slate-300"></i>
+              <i data-lucide="user" class="h-4 w-4 text-slate-300"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= ENTERPRISE CAPABILITIES ================= -->
   <section id="enterprise" class="px-6 py-28">
     <div class="max-w-7xl mx-auto">
@@ -759,6 +866,7 @@
       <ul class="space-y-2.5 text-sm text-slate-500">
         <li><a href="#features" class="hover:text-slate-900 transition-colors">Features</a></li>
         <li><a href="#agents" class="hover:text-slate-900 transition-colors">Agents</a></li>
+        <li><a href="#mobile-app" class="hover:text-slate-900 transition-colors">Mobile App</a></li>
         <li><a href="#enterprise" class="hover:text-slate-900 transition-colors">Enterprise</a></li>
         <li><a href="#how-it-works" class="hover:text-slate-900 transition-colors">How It Works</a></li>
         <li><a href="#pricing" class="hover:text-slate-900 transition-colors">Pricing</a></li>
