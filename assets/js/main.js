@@ -1,4 +1,67 @@
 // Shared page behaviour for Agentic Hub marketing pages.
+
+// Wires up a horizontal snap-scroll slider (track + optional prev/next buttons + dot indicators).
+function initSnapSlider({ trackId, prevId, nextId, dotsId, itemLabel }) {
+  const track = document.getElementById(trackId);
+  const dotsWrap = document.getElementById(dotsId);
+  if (!track || !dotsWrap) return;
+
+  const prevBtn = prevId && document.getElementById(prevId);
+  const nextBtn = nextId && document.getElementById(nextId);
+  const items = Array.from(track.children);
+
+  items.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.setAttribute('aria-label', `Go to ${itemLabel} ${i + 1}`);
+    dot.className = 'h-1.5 rounded-full transition-all bg-slate-300 w-1.5';
+    dot.addEventListener('click', () => {
+      track.scrollTo({ left: items[i].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+    });
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  const setActiveDot = (index) => {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-indigo-500', i === index);
+      dot.classList.toggle('w-6', i === index);
+      dot.classList.toggle('bg-slate-300', i !== index);
+      dot.classList.toggle('w-1.5', i !== index);
+    });
+  };
+
+  const closestItemIndex = () => {
+    const trackCenter = track.scrollLeft + track.offsetLeft;
+    let closest = 0;
+    let smallestDiff = Infinity;
+    items.forEach((item, i) => {
+      const diff = Math.abs(item.offsetLeft - trackCenter);
+      if (diff < smallestDiff) {
+        smallestDiff = diff;
+        closest = i;
+      }
+    });
+    return closest;
+  };
+
+  let scrollTimeout;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => setActiveDot(closestItemIndex()), 100);
+  });
+
+  const scrollByItem = (direction) => {
+    const current = closestItemIndex();
+    const target = items[Math.min(items.length - 1, Math.max(0, current + direction))];
+    track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+  };
+
+  if (prevBtn) prevBtn.addEventListener('click', () => scrollByItem(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => scrollByItem(1));
+
+  setActiveDot(0);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
 
@@ -146,63 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Agents slider (only runs on pages that have it)
-  const track = document.getElementById('agents-track');
-  const prevBtn = document.getElementById('agents-prev');
-  const nextBtn = document.getElementById('agents-next');
-  const dotsWrap = document.getElementById('agents-dots');
-  if (track && dotsWrap) {
-    const cards = Array.from(track.children);
+  initSnapSlider({ trackId: 'agents-track', prevId: 'agents-prev', nextId: 'agents-next', dotsId: 'agents-dots', itemLabel: 'agent' });
 
-    // Build one dot per card
-    cards.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.setAttribute('aria-label', `Go to agent ${i + 1}`);
-      dot.className = 'h-1.5 rounded-full transition-all bg-slate-300 w-1.5';
-      dot.addEventListener('click', () => {
-        track.scrollTo({ left: cards[i].offsetLeft - track.offsetLeft, behavior: 'smooth' });
-      });
-      dotsWrap.appendChild(dot);
-    });
-    const dots = Array.from(dotsWrap.children);
-
-    const setActiveDot = (index) => {
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('bg-indigo-500', i === index);
-        dot.classList.toggle('w-6', i === index);
-        dot.classList.toggle('bg-slate-300', i !== index);
-        dot.classList.toggle('w-1.5', i !== index);
-      });
-    };
-
-    const closestCardIndex = () => {
-      const trackCenter = track.scrollLeft + track.offsetLeft;
-      let closest = 0;
-      let smallestDiff = Infinity;
-      cards.forEach((card, i) => {
-        const diff = Math.abs(card.offsetLeft - trackCenter);
-        if (diff < smallestDiff) {
-          smallestDiff = diff;
-          closest = i;
-        }
-      });
-      return closest;
-    };
-
-    let scrollTimeout;
-    track.addEventListener('scroll', () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => setActiveDot(closestCardIndex()), 100);
-    });
-
-    const scrollByCard = (direction) => {
-      const current = closestCardIndex();
-      const target = cards[Math.min(cards.length - 1, Math.max(0, current + direction))];
-      track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior: 'smooth' });
-    };
-
-    if (prevBtn) prevBtn.addEventListener('click', () => scrollByCard(-1));
-    if (nextBtn) nextBtn.addEventListener('click', () => scrollByCard(1));
-
-    setActiveDot(0);
-  }
+  // Mobile app screen slider (only runs on pages that have it)
+  initSnapSlider({ trackId: 'mobile-track', prevId: 'mobile-prev', nextId: 'mobile-next', dotsId: 'mobile-dots', itemLabel: 'screen' });
 });

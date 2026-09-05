@@ -487,57 +487,168 @@
         </div>
       </div>
 
-      <!-- Phone mockup -->
-      <div class="relative flex justify-center">
-        <div class="absolute inset-x-10 inset-y-6 bg-gradient-to-br from-indigo-200/30 via-violet-200/30 to-transparent blur-3xl -z-10"></div>
+      <!-- Phone mockup slider: swipe through each agent's mobile screen -->
+      <div>
+        <div class="relative flex items-center justify-center gap-3 sm:gap-5">
+          <div class="absolute inset-x-10 inset-y-6 bg-gradient-to-br from-indigo-200/30 via-violet-200/30 to-transparent blur-3xl -z-10"></div>
 
-        <div class="w-[280px] rounded-[2.5rem] border-[10px] border-slate-900 bg-slate-900 shadow-2xl shadow-slate-400/40">
-          <div class="relative bg-white rounded-[1.75rem] overflow-hidden aspect-[9/19]">
-            <!-- notch -->
-            <div class="absolute top-0 inset-x-0 flex justify-center z-10">
-              <div class="h-5 w-28 rounded-b-2xl bg-slate-900"></div>
-            </div>
+          <button id="mobile-prev" aria-label="Previous agent screen" class="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white shadow-md hover:bg-slate-50 transition-colors">
+            <i data-lucide="chevron-left" class="h-4 w-4 text-slate-600"></i>
+          </button>
 
-            <!-- app header -->
-            <div class="pt-9 px-4 pb-3 border-b border-slate-100 flex items-center gap-2">
-              <div class="h-7 w-7 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shrink-0">
-                <i data-lucide="bot" class="h-3.5 w-3.5 text-white"></i>
+          <div class="w-[280px] shrink-0 rounded-[2.5rem] border-[10px] border-slate-900 bg-slate-900 shadow-2xl shadow-slate-400/40">
+            <div class="relative bg-white rounded-[1.75rem] overflow-hidden aspect-[9/19]">
+              <!-- notch -->
+              <div class="absolute top-0 inset-x-0 flex justify-center z-20">
+                <div class="h-5 w-28 rounded-b-2xl bg-slate-900"></div>
               </div>
-              <div class="min-w-0">
-                <p class="text-xs font-semibold text-slate-900">General Agent</p>
-                <p class="text-[10px] text-emerald-600 flex items-center gap-1">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Online
-                </p>
-              </div>
-            </div>
 
-            <!-- chat thread -->
-            <div class="px-4 py-3 space-y-2.5 text-[11px] leading-relaxed">
-              <div class="flex justify-end">
-                <div class="rounded-lg rounded-tr-sm bg-indigo-50 border border-indigo-100 px-3 py-2 max-w-[80%] text-indigo-900">What's next with Northwind Logistics?</div>
-              </div>
-              <div class="flex justify-start">
-                <div class="rounded-lg rounded-tl-sm bg-slate-100 px-3 py-2 max-w-[80%] text-slate-600">Pilot rollout starts Monday, 20 seats. Want me to draft the kickoff email?</div>
-              </div>
-              <div class="flex justify-end">
-                <div class="rounded-lg rounded-tr-sm bg-indigo-50 border border-indigo-100 px-3 py-2 max-w-[80%] text-indigo-900">Yes please 🙌</div>
-              </div>
-            </div>
+              <div id="mobile-track" class="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide">
 
-            <!-- floating scan button -->
-            <div class="absolute bottom-16 right-4 h-11 w-11 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 shadow-lg shadow-indigo-500/40 flex items-center justify-center">
-              <i data-lucide="scan-line" class="h-5 w-5 text-white"></i>
-            </div>
+                <!-- Slide 1: General Agent -->
+                <div class="w-full h-full shrink-0 snap-start flex flex-col">
+                  <div class="pt-9 px-4 pb-3 border-b border-slate-100 flex items-center gap-2 shrink-0">
+                    <div class="h-7 w-7 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shrink-0">
+                      <i data-lucide="bot" class="h-3.5 w-3.5 text-white"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <p class="text-xs font-semibold text-slate-900">General Agent</p>
+                      <p class="text-[10px] text-emerald-600 flex items-center gap-1">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Online
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex-1 px-4 py-3 space-y-2.5 text-[11px] leading-relaxed overflow-hidden">
+                    <div class="flex justify-end">
+                      <div class="rounded-lg rounded-tr-sm bg-indigo-50 border border-indigo-100 px-3 py-2 max-w-[80%] text-indigo-900">What's next with Northwind Logistics?</div>
+                    </div>
+                    <div class="flex justify-start">
+                      <div class="rounded-lg rounded-tl-sm bg-slate-100 px-3 py-2 max-w-[80%] text-slate-600">Pilot rollout starts Monday, 20 seats. Want me to draft the kickoff email?</div>
+                    </div>
+                    <div class="flex justify-end">
+                      <div class="rounded-lg rounded-tr-sm bg-indigo-50 border border-indigo-100 px-3 py-2 max-w-[80%] text-indigo-900">Yes please 🙌</div>
+                    </div>
+                  </div>
+                  <div class="border-t border-slate-100 bg-white px-6 py-3 flex items-center justify-between shrink-0">
+                    <i data-lucide="message-circle" class="h-4 w-4 text-slate-300"></i>
+                    <i data-lucide="contact" class="h-4 w-4 text-slate-300"></i>
+                    <i data-lucide="bot" class="h-4 w-4 text-indigo-500"></i>
+                    <i data-lucide="user" class="h-4 w-4 text-slate-300"></i>
+                  </div>
+                </div>
 
-            <!-- bottom nav -->
-            <div class="absolute bottom-0 inset-x-0 border-t border-slate-100 bg-white px-6 py-3 flex items-center justify-between">
-              <i data-lucide="message-circle" class="h-4 w-4 text-indigo-500"></i>
-              <i data-lucide="contact" class="h-4 w-4 text-slate-300"></i>
-              <i data-lucide="bot" class="h-4 w-4 text-slate-300"></i>
-              <i data-lucide="user" class="h-4 w-4 text-slate-300"></i>
+                <!-- Slide 2: Meeting Notes Agent -->
+                <div class="w-full h-full shrink-0 snap-start flex flex-col">
+                  <div class="pt-9 px-4 pb-3 border-b border-slate-100 flex items-center gap-2 shrink-0">
+                    <div class="h-7 w-7 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shrink-0">
+                      <i data-lucide="file-audio" class="h-3.5 w-3.5 text-white"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <p class="text-xs font-semibold text-slate-900">Meeting Notes Agent</p>
+                      <p class="text-[10px] text-emerald-600 flex items-center gap-1">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Online
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex-1 px-4 py-3 text-[11px] leading-relaxed overflow-hidden">
+                    <div class="flex items-center gap-2 mb-3">
+                      <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                      </span>
+                      <span class="text-[10px] font-medium text-emerald-600">Recording · 00:03:41</span>
+                    </div>
+                    <p class="text-slate-500 mb-3">"...we'd want reporting exportable to CSV and a webhook for status changes..."</p>
+                    <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-2 flex items-center gap-2">
+                      <i data-lucide="list-checks" class="h-3.5 w-3.5 text-emerald-500 shrink-0"></i>
+                      <span class="text-emerald-700">Action: Build CSV export + webhook</span>
+                    </div>
+                  </div>
+                  <div class="border-t border-slate-100 bg-white px-6 py-3 flex items-center justify-between shrink-0">
+                    <i data-lucide="message-circle" class="h-4 w-4 text-indigo-500"></i>
+                    <i data-lucide="contact" class="h-4 w-4 text-slate-300"></i>
+                    <i data-lucide="bot" class="h-4 w-4 text-slate-300"></i>
+                    <i data-lucide="user" class="h-4 w-4 text-slate-300"></i>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Business Card Scanner -->
+                <div class="w-full h-full shrink-0 snap-start flex flex-col">
+                  <div class="pt-9 px-4 pb-3 border-b border-slate-100 flex items-center gap-2 shrink-0">
+                    <div class="h-7 w-7 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shrink-0">
+                      <i data-lucide="scan-line" class="h-3.5 w-3.5 text-white"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <p class="text-xs font-semibold text-slate-900">Card Scanner</p>
+                      <p class="text-[10px] text-emerald-600 flex items-center gap-1">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Online
+                      </p>
+                    </div>
+                  </div>
+                  <div class="relative flex-1 px-4 py-3 text-[11px] leading-relaxed overflow-hidden">
+                    <div class="relative h-24 rounded-lg border border-dashed border-indigo-300 bg-slate-50 flex items-center justify-center overflow-hidden mb-3">
+                      <i data-lucide="contact" class="h-8 w-8 text-slate-300"></i>
+                      <div class="absolute inset-x-0 h-0.5 bg-indigo-400 shadow-[0_0_12px_2px_rgba(129,140,248,0.6)] animate-[float_2s_ease-in-out_infinite]"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                      <div class="rounded bg-slate-50 border border-slate-200 px-2 py-1.5 text-slate-400">Name: <span class="text-slate-700">D. Ruiz</span></div>
+                      <div class="rounded bg-slate-50 border border-slate-200 px-2 py-1.5 text-slate-400">Co: <span class="text-slate-700">Vantage</span></div>
+                    </div>
+                    <div class="absolute bottom-2 right-2 h-9 w-9 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 shadow-lg shadow-indigo-500/40 flex items-center justify-center">
+                      <i data-lucide="camera" class="h-4 w-4 text-white"></i>
+                    </div>
+                  </div>
+                  <div class="border-t border-slate-100 bg-white px-6 py-3 flex items-center justify-between shrink-0">
+                    <i data-lucide="message-circle" class="h-4 w-4 text-slate-300"></i>
+                    <i data-lucide="contact" class="h-4 w-4 text-indigo-500"></i>
+                    <i data-lucide="bot" class="h-4 w-4 text-slate-300"></i>
+                    <i data-lucide="user" class="h-4 w-4 text-slate-300"></i>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Requirement Brainstorming Agent -->
+                <div class="w-full h-full shrink-0 snap-start flex flex-col">
+                  <div class="pt-9 px-4 pb-3 border-b border-slate-100 flex items-center gap-2 shrink-0">
+                    <div class="h-7 w-7 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shrink-0">
+                      <i data-lucide="message-circle-question" class="h-3.5 w-3.5 text-white"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <p class="text-xs font-semibold text-slate-900">Requirements Agent</p>
+                      <p class="text-[10px] text-emerald-600 flex items-center gap-1">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Online
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex-1 px-4 py-3 space-y-2.5 text-[11px] leading-relaxed overflow-hidden">
+                    <div class="flex justify-end">
+                      <div class="rounded-lg rounded-tr-sm bg-indigo-50 border border-indigo-100 px-3 py-2 max-w-[85%] text-indigo-900">Security requirements from yesterday's call?</div>
+                    </div>
+                    <div class="flex justify-start">
+                      <div class="rounded-lg rounded-tl-sm bg-slate-100 px-3 py-2 max-w-[85%] text-slate-600">
+                        SOC 2 Type II compliance and SSO via Okta.
+                        <span class="block mt-1 text-[10px] font-medium text-indigo-500">↳ cited from 00:02:14</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-t border-slate-100 bg-white px-6 py-3 flex items-center justify-between shrink-0">
+                    <i data-lucide="message-circle" class="h-4 w-4 text-slate-300"></i>
+                    <i data-lucide="contact" class="h-4 w-4 text-slate-300"></i>
+                    <i data-lucide="bot" class="h-4 w-4 text-indigo-500"></i>
+                    <i data-lucide="user" class="h-4 w-4 text-slate-300"></i>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
+
+          <button id="mobile-next" aria-label="Next agent screen" class="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white shadow-md hover:bg-slate-50 transition-colors">
+            <i data-lucide="chevron-right" class="h-4 w-4 text-slate-600"></i>
+          </button>
         </div>
+
+        <!-- Dot indicators -->
+        <div id="mobile-dots" class="mt-6 flex items-center justify-center gap-2"></div>
       </div>
     </div>
   </section>
