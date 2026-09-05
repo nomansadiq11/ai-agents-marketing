@@ -11,6 +11,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Signup modal, opened by any [data-open-modal="signup"] trigger (only runs on pages that have it)
+  const signupModal = document.getElementById('signup-modal');
+  if (signupModal) {
+    const backdrop = document.getElementById('signup-modal-backdrop');
+    const closeBtn = document.getElementById('signup-modal-close');
+    const form = document.getElementById('signup-modal-form');
+    const formState = document.getElementById('signup-modal-form-state');
+    const successState = document.getElementById('signup-modal-success-state');
+    const emailInput = document.getElementById('signup-email');
+
+    const openModal = (prefillEmail) => {
+      form.reset();
+      formState.classList.remove('hidden');
+      successState.classList.add('hidden');
+      if (prefillEmail) emailInput.value = prefillEmail;
+      signupModal.classList.remove('hidden');
+      signupModal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    };
+
+    const closeModal = () => {
+      signupModal.classList.add('hidden');
+      signupModal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+    };
+
+    document.querySelectorAll('[data-open-modal="signup"]').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const prefillId = trigger.getAttribute('data-prefill-email');
+        const prefillSource = prefillId ? document.getElementById(prefillId) : null;
+        openModal(prefillSource ? prefillSource.value : '');
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !signupModal.classList.contains('hidden')) closeModal();
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formState.classList.add('hidden');
+      successState.classList.remove('hidden');
+    });
+  }
+
   // Pricing monthly/yearly toggle (only runs on pages that have it)
   const monthlyBtn = document.getElementById('toggle-monthly');
   const yearlyBtn = document.getElementById('toggle-yearly');
