@@ -4,7 +4,7 @@ Static, no-build marketing site (Tailwind CDN + Lucide icons). No package.json, 
 
 ## Local Preview
 
-`docker compose up -d` serves the whole repo via nginx at http://localhost:8080 (no build step, just a static file server). Run `docker compose down` when done. Preview changes this way before committing/pushing.
+`docker compose up -d` serves the whole repo via nginx at http://localhost:8082 (no build step, just a static file server). Run `docker compose down` when done. Preview changes this way before committing/pushing.
 
 ## Architecture
 

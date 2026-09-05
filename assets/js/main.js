@@ -37,6 +37,56 @@ document.addEventListener('DOMContentLoaded', () => {
     yearlyBtn.addEventListener('click', () => setActive(false));
   }
 
+  // Hero headline slogan rotator (only runs on pages that have it)
+  const heroHeadline = document.getElementById('hero-headline');
+  const heroDotsWrap = document.getElementById('hero-headline-dots');
+  if (heroHeadline && heroDotsWrap) {
+    const slogans = [
+      'Tired of Repetitive <span class="text-gradient">Administrative Work</span>?',
+      'Turn Every Meeting &amp; Business Card Into <span class="text-gradient">Actionable Intelligence</span>',
+      'Build Your Own AI Agents, <span class="text-gradient">Tailored to Your Requirements</span>',
+    ];
+    let activeSlogan = 1; // matches the slogan already in the markup
+    let rotateTimer;
+
+    slogans.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.setAttribute('aria-label', `Show headline ${i + 1}`);
+      dot.className = 'h-1.5 rounded-full transition-all bg-slate-300 w-1.5';
+      dot.addEventListener('click', () => showSlogan(i, true));
+      heroDotsWrap.appendChild(dot);
+    });
+    const heroDots = Array.from(heroDotsWrap.children);
+
+    const setActiveHeroDot = (index) => {
+      heroDots.forEach((dot, i) => {
+        dot.classList.toggle('bg-indigo-500', i === index);
+        dot.classList.toggle('w-6', i === index);
+        dot.classList.toggle('bg-slate-300', i !== index);
+        dot.classList.toggle('w-1.5', i !== index);
+      });
+    };
+
+    const showSlogan = (index, manual) => {
+      heroHeadline.classList.add('opacity-0');
+      setTimeout(() => {
+        heroHeadline.innerHTML = slogans[index];
+        heroHeadline.classList.remove('opacity-0');
+        activeSlogan = index;
+        setActiveHeroDot(index);
+      }, 500);
+      if (manual) restartHeroRotation();
+    };
+
+    const restartHeroRotation = () => {
+      clearInterval(rotateTimer);
+      rotateTimer = setInterval(() => showSlogan((activeSlogan + 1) % slogans.length), 5000);
+    };
+
+    setActiveHeroDot(activeSlogan);
+    restartHeroRotation();
+  }
+
   // Agents slider (only runs on pages that have it)
   const track = document.getElementById('agents-track');
   const prevBtn = document.getElementById('agents-prev');
